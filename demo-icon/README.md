@@ -1,0 +1,1 @@
+Wikipedia [Windows Icon](https://en.wikipedia.org/wiki/ICO_(file_format)) created for demo purposes with [GIMP](https://en.wikipedia.org/wiki/GIMP) and [Tango_style_Wikipedia_Icon.svg](https://de.wikipedia.org/wiki/Datei:Tango_style_Wikipedia_Icon.svg) by [mischamajskij](https://www.deviantart.com/mischamajskij).
