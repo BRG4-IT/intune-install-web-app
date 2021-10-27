@@ -1,18 +1,19 @@
 # Creating Desktop Shortcuts with intune (User & System context)
 
-`install-web-app` lets you depoly desktop shortcuts to machines and users in your organisation. You can use the precompiled [install-web-app.intunewin](./install-web-app.intunewin) or create your own from the powerscript script file (see below). 
+`install-web-app` lets you depoly desktop shortcuts to machines and users in your organisation. You can use the precompiled [install-web-app.intunewin](./install-web-app.intunewin?raw=true) or create your own from the powerscript script file (see below). 
 
-The `-ShortcutIconUrl` can be omitted. In this case an generic windows icon will be used. If you use the parameter The URL has to point to an valid [ICO (file format)](https://en.wikipedia.org/wiki/ICO_(file_format)) file.
+The `-ShortcutIconUrl` parameter can be omitted. In this case an generic windows icon will be used. When using this parameter make sure the URL points to a valid Windows [ICO (file format)](https://en.wikipedia.org/wiki/ICO_(file_format)) file.
 
 
 ## Example: Create a Desktop shortcut to Wikipedia
 
-Follow the example to create a desktop shortcut to [Simple Wikipedia](https://simple.wikipedia.org/) for all users in system context.
+Follow these instructions to create a desktop shortcut to [Simple Wikipedia](https://simple.wikipedia.org/) using Intune for all users in system context.
 
 
 App-Typ auswählen: __Windows-App (Win32)__
 
-Upload: [install-web-app.intunewin](./install-web-app.intunewin)
+Upload: [install-web-app.intunewin](./install-web-app.intunewin?raw=true)
+
 
 ### App-Informationen (App Information):
 
@@ -72,9 +73,9 @@ Wikipedia.lnk
 Detection method: __File or folder exists__
 
 
-## Convert script to .intunewin
+## Compile script to .intunewin
 
-If you do not want to use the precompiled [install-web-app.intunewin](./install-web-app.intunewin) file, here is how to create it on your own:
+If you do not want to use the precompiled [install-web-app.intunewin](./install-web-app.intunewin?raw=true) file, here is how to create it on your own:
 
 1. Clone/download this repository
 2. Download the [IntuneWinAppUtil](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool) Programm
@@ -86,4 +87,15 @@ If you do not want to use the precompiled [install-web-app.intunewin](./install-
 ```
 .\IntuneWinAppUtil.exe -c .\ -s install-web-app.ps1 -o .\
 ```
+
+## Testing the script in system context on local computer
+
+[Download and install PsTools (3.5 MB)](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) by Mark Russinovich and use the command `psexec.exe` to open a Powershell ISE in system context.
+
+```
+psexec.exe -s -i "C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell_ise.exe"
+```
+
+
+
 
