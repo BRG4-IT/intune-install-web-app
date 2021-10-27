@@ -93,7 +93,7 @@ If you do not want to use the precompiled [install-web-app.intunewin](./install-
 [Download and install PsTools (3.5 MB)](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) by Mark Russinovich and use the command `psexec.exe` to open a Powershell ISE in system context.
 
 ```
-psexec.exe -s -i "C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell_ise.exe"
+psexec.exe -s -i powershell_ise.exe
 ```
 
 
